@@ -42,7 +42,7 @@ app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
  * @swagger
  * /trip/booktrip:
  *  post:
- *    description:  to request to customers
+ *    description:  to add location and destination
  *    tags:
  *        - TRIPS
  *    parameters:
@@ -50,7 +50,7 @@ app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
  *        name: location, Destination
  *        schema:
  *          type: string
- *        description: Put Ya Location
+ *        description: Put Ya Location and Ya Destination
  *        required: true
  *
  *    responses:
@@ -99,10 +99,6 @@ app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
  *      default:
  *        description: SERVER ERROR
  */
-
-// app.get("/customers", (req, res, next) => {
-//   res.status(200).send("customer results");
-// });
 
 const connectDB = require("./db/config");
 
