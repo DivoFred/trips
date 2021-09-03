@@ -7,9 +7,11 @@ const TripSchema = new mongoose.Schema({
   },
   destination: {
     type: String,
+    required: true,
   },
   status: {
     type: String,
+    required: true,
     default: "pending",
   },
   date: {

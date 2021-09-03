@@ -55,3 +55,20 @@ exports.deleteAll = async (req, res, next) => {
   });
   next();
 };
+
+exports.updateStatus = async (req, res, next) => {
+  const { id } = req.params;
+  const { newStatus } = req.body;
+  await Trip.findById(id)
+    .then((e) => {
+      e.status = newStatus;
+      e.save((err) => {
+        if (err) {
+          res.status("400").json({ success: true, message: err });
+          process.exit(1);
+        }
+        res.status("201").json({ success: true, message: e });
+      });
+    })
+    .catch((err) => res.status("400").json({ success: false, message: err }));
+};
