@@ -5,7 +5,7 @@ const cloudDB = `mongodb+srv://trip:${trip}@trips.9soyz.mongodb.net/trips?retryW
 
 const connectDB = async () => {
   await mongoose
-    .connect(localDB, {
+    .connect(cloudDB, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
