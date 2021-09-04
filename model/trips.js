@@ -19,6 +19,22 @@ const TripSchema = new mongoose.Schema({
     default: Date.now(),
   },
 });
-const trip = mongoose.model("trip", TripSchema);
+const UserSchema = new mongoose.Schema({
+  user: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  role: {
+    type: String,
+    default: "Basic",
+  },
+  todos: [TripSchema],
+});
+const User = mongoose.model("user", UserSchema);
+const Trip = mongoose.model("trip", TripSchema);
 
-module.exports = trip;
+module.exports = { Trip, User };

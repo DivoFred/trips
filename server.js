@@ -3,8 +3,10 @@ const router = require("./controller/router");
 const app = express();
 const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
+const path = require("path");
 
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "public")));
 const PORT = process.env.PORT || "5000";
 app.use("/", router);
 const swaggerOptions = {

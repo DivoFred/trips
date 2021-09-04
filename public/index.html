@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Flat HTML5/CSS3 Login Form</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="login-page">
+  <div class="form">
+    <p class="display"></p>
+    <form class="register-form">
+      <input type="text" placeholder="username" class="user-register"/>
+      <input type="password" placeholder="password" class="pass-register"/>
+      <button type="submit">create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form>
+    <form class="login-form">
+      <input type="text" placeholder="username" name="user" class="user-login"/>
+      <input type="password" placeholder="password" name="password" class="pass-login"/>
+      <button type="submit" class="submit">login</button>
+      <p class="message message2">Not registered? <a href="#">Create an account</a></p>
+    </form>
+  </div>
+</div>
+<!-- partial -->
+  <script src='./jquery.js'></script>
+  <script src="./axios.min.js"></script>
+  <script  src="./script.js"></script>
+
+</body>
+</html>
