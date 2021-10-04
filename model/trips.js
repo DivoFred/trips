@@ -22,7 +22,6 @@ const TripSchema = new mongoose.Schema({
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true,
   },
   user: {
     type: String,
