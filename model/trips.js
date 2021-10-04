@@ -20,6 +20,10 @@ const TripSchema = new mongoose.Schema({
   },
 });
 const UserSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
   user: {
     type: String,
     required: true,
@@ -32,7 +36,7 @@ const UserSchema = new mongoose.Schema({
     type: String,
     default: "Basic",
   },
-  todos: [TripSchema],
+  trips: [TripSchema],
 });
 const User = mongoose.model("user", UserSchema);
 const Trip = mongoose.model("trip", TripSchema);

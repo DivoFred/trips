@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trial</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+        <style>
+            [class*="col"] {
+                padding: 1rem;
+                background-color: #33b5e5;
+                border: 2px solid #fff;
+                /* color: #fff; */
+                text-align: center;
+            }
+        </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="modal fade" role="dialog" id="modal1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h4>Add Trip</h4> 
+                        </div>
+                        <button class="close btn btn-primary" type="button" data-dismiss="modal">&times;</button>
+                        <div class="modal-body">
+                            Location
+                            <input type="text" class="form-control">
+                            Destination
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="modal-footer">
+                            <input value="submit" class="btn btn-primary">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <a href="#" data-toggle="modal" data-target="#modal1"><button class="btn btn-secondary">Open Modal</button></a>
+        </div>
+        </div>
+    </div>
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="./bootstrap.min.js"></script>
+    <script src="./popper.min.js"></script>
+</body>
+</html>
